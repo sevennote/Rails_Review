@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
 		@article = Article.new
 	end
 
+	def edit
+		@article = Article.find(params[:id])
+	end
+
 	def index
 		@articles = Article.all
 	end
@@ -29,6 +33,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		puts "you are showing off"
 		@article = Article.find(params[:id])
 	end
 
